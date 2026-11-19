@@ -33,7 +33,7 @@ Die beiden Import-Skripte zusammen sind deterministisch. Aber: Ein erneuter Impo
 | `_events/JJJJ-MM-TT-name.md` | Events. Felder angelehnt an die Eventbrite-API (siehe README). `start`/`end` **immer als String in Anführungszeichen** |
 | `_posts/*.html` | 156 importierte WordPress-Beiträge (HTML, `render_with_liquid: false`, `lang: de\|en`, `wp_id`, `wp_url`). Neue Beiträge als `.md` |
 | `_data/` | `navigation`, `formate` (Format-Schlüssel für Events), `partner` (Entwurf, aus Blogbeiträgen abgeleitet), `kennzahlen` (Platzhalter), `stimmen`, `vorstand` (Vorstand + erweiterter Vorstand, Porträts in `assets/img/team/`) |
-| `_includes/` | `head` (SEO, JSON-LD), `header`, `footer`, `event-card`, `post-card`, `events-split` (teilt Events in `upcoming`/`past`), `datum` (deutsche Datumsformate), `jsonld-*` |
+| `_includes/` | `head` (SEO, JSON-LD), `header`, `footer`, `event-card`, `post-card`, `events-split` (teilt Events in `upcoming`/`past`), `datum` (deutsche Datumsformate), `icon` (Social-Icons als Inline-SVG), `team-grid`, `jsonld-*` |
 | `_layouts/` | `default`, `page`, `post`, `event` |
 | `_plugins/baseurl_uploads.rb` | Setzt die baseurl vor `/assets/uploads/` in gerendertem HTML (nur nötig, solange die Seite unter /StartupDorf läuft) |
 | `index.html`, `events/`, `events.ics`, `blog/`, `formate/`, `unterstuetzen.md`, `mitmachen.md`, `ueber-uns.md`, `impressum.md`, `datenschutz.md`, `404.html` | Seiten |
@@ -58,6 +58,7 @@ Die beiden Import-Skripte zusammen sind deterministisch. Aber: Ein erneuter Impo
 - Event-Permalink: `/events/:year-:month-:day-:title/`. Mit `:name` würde Jekyll das Datum entfernen, und Events mit gleichem Namen überschreiben sich gegenseitig.
 - Event-Daten **in Anführungszeichen setzen**. Gemischte Date/Time-Typen lassen `sort` abbrechen. Nur-Datum (`"2026-09-02"`) ist erlaubt, im JSON-LD wird dann nur das Datum ausgegeben.
 - Liquid `include` akzeptiert kein `var[0]`: vorher `assign x = var | first`.
+- Include-Parameter nie `size`, `first` oder `last` nennen: `include.size` liefert die Anzahl der Parameter. Deshalb heißt die Icon-Größe in `_includes/icon.html` `px`.
 - WordPress-HTML verwendet teils `href='…'` mit einfachen Anführungszeichen. Das baseurl-Plugin deckt beide Schreibweisen ab.
 - Links in Markdown-Seiten immer mit `{{ '/pfad/' | relative_url }}` schreiben, sonst brechen sie unter /StartupDorf.
 - `noindex: true` in `_config.yml` erst beim Livegang auf `false` setzen. Vorher droht Duplicate Content zur alten WordPress-Seite.
