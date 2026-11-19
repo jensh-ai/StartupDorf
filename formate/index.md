@@ -7,7 +7,7 @@ description: "Gründerstammtisch, Unicorn Pitch, Power Pitch und Dorfschule: die
 
 ## Gründerstammtisch {#gruenderstammtisch}
 
-**Jeden ersten Mittwoch im Monat.** Das Herz der Community seit 2013 – und mit über 140 Ausgaben eines der langlebigsten Gründer-Formate in NRW. Jeden Monat kommen 40 bis 80 Gründerinnen, Gründer, Investoren und Unterstützer zusammen. Ohne Eintritt, ohne Verkaufsgespräche.
+**Jeden ersten Mittwoch im Monat.** Das Herz der Community seit 2013 – und mit über 140 Ausgaben eines der langlebigsten Gründer-Formate in NRW. Jeden Monat kommen 40 bis 80 Gründerinnen, Gründer, Investoren und Unterstützer zusammen. Ohne Verkaufsgespräche, dafür mit echten Begegnungen.
 
 [Mehr zum Gründerstammtisch →]({{ '/formate/gruenderstammtisch/' | relative_url }})
 

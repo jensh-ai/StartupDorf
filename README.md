@@ -47,7 +47,7 @@ venue:
   lat: 51.2211143                  # optional, für Karte & Google
   lng: 6.7809579
 host: Mindspace Düsseldorf         # Gastgeber, wird auf der Eventseite gedankt
-price: kostenlos
+tickets_hinweis: "…"            # optional, sonst Standardtext aus _config.yml (bewusst ohne Preise)
 tickets_url: https://www.eventbrite.de/e/...
 image: /assets/img/event-144.jpg   # ca. 940×470 px
 summary: "Ein Satz für Karten, Google und Kalender."

@@ -48,6 +48,7 @@ Die beiden Import-Skripte zusammen sind deterministisch. Aber: Ein erneuter Impo
 - **Events aus Eventbrite** werden nicht per iframe/Widget eingebunden: schlecht für SEO, setzt Cookies. Stattdessen eigene Eventseiten mit `schema.org/Event` und dem ICS-Feed `/events.ics`. Die Anmeldung verlinkt auf Eventbrite. Ob Events künftig automatisch (Eventbrite-API) oder von Hand gepflegt werden, ist **noch offen**.
 - Eventbrite zeigt **vergangene Events nicht öffentlich**. Die vier vergangenen Events stammen aus Blog-Rückblicken.
 - **Keine Cookies, kein Tracking, keine Drittanbieter-Skripte** → kein Cookie-Banner nötig. YouTube-Einbettungen laufen über `youtube-nocookie.com`.
+- **Tickets:** Events sind nicht kostenlos. Es gibt Supporter-Tickets auf Eventbrite (z. B. 10 €/25 €) und ein kleines Kontingent freier Plätze. Auf der Webseite werden **keine Preise und nicht „kostenlos“** genannt, nur dezent der Hinweis, dass das Ticket die Community trägt (`tickets_hinweis` in `_config.yml`). Getränke und Snacks werden nicht versprochen. Im JSON-LD steht kein `price` (wäre sonst „kostenlos“ bei Google).
 - Formulare (Mitgliedschaft, Pitch-Bewerbung) sind vorerst `mailto:`-Links. Ein Formulardienst ist noch nicht entschieden.
 - Ein CMS (z. B. Pages CMS oder Decap) kommt später. Der Nutzer arbeitet derzeit selbst mit GitHub.
 - Kennzahlen: Stammtisch jeden ersten Mittwoch im Monat, 40–80 Gäste, über 140 Ausgaben, Grand Final 2026 mit 125 Tickets ausverkauft. **Weitere Zahlen liefert der Nutzer nach.**

@@ -14,11 +14,11 @@ layout: default
         <dl class="event-facts">
           <div><dt>Wann</dt><dd>{% include datum.html date=page.start style="lang" %}{% if page.start.size > 10 %}<br>{% include datum.html date=page.start style="zeit" %}{% if page.end %} – {% include datum.html date=page.end style="zeit" %}{% endif %}{% endif %}</dd></div>
           <div><dt>Wo</dt><dd>{{ page.venue.name }}{% if page.venue.street %}<br>{{ page.venue.street }}, {{ page.venue.postal_code }} {{ page.venue.city }}{% endif %}</dd></div>
-          {%- if page.price %}<div><dt>Eintritt</dt><dd>{{ page.price }}</dd></div>{% endif %}
+          {%- if page.tickets_url %}<div><dt>Tickets</dt><dd>{{ page.tickets_hinweis | default: site.tickets_hinweis }}</dd></div>{% endif %}
         </dl>
         {%- if tag >= heute %}
         <p class="actions">
-          {%- if page.tickets_url %}<a class="btn btn-primary btn-lg" href="{{ page.tickets_url }}" rel="noopener">Kostenlos anmelden</a>{% endif %}
+          {%- if page.tickets_url %}<a class="btn btn-primary btn-lg" href="{{ page.tickets_url }}" rel="noopener">Ticket sichern</a>{% endif %}
           <a class="btn btn-ghost" href="{{ '/events.ics' | relative_url }}">Kalender abonnieren</a>
         </p>
         {%- else %}

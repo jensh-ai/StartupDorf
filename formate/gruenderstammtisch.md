@@ -1,7 +1,7 @@
 ---
 title: Gründerstammtisch Düsseldorf
 kicker: Formate · Seit 2013
-lead: Jeden ersten Mittwoch im Monat treffen sich Gründerinnen, Gründer und Akteure des Startup-Ökosystems aus ganz NRW – ungezwungen, kostenlos, auf Augenhöhe.
+lead: Jeden ersten Mittwoch im Monat treffen sich Gründerinnen, Gründer und Akteure des Startup-Ökosystems aus ganz NRW – ungezwungen, auf Augenhöhe, getragen von der Community.
 description: "Der Gründerstammtisch von StartupDorf: jeden ersten Mittwoch im Monat in Düsseldorf. Seit 2013 über 140 Treffen mit 40–80 Gründerinnen, Gründern und Unterstützern."
 ---
 {% include events-split.html %}
@@ -18,7 +18,7 @@ Der Gründerstammtisch ist das älteste und wichtigste Format von StartupDorf. S
 - **Wann:** jeden ersten Mittwoch im Monat, abends
 - **Wo:** wechselnde Gastgeber in Düsseldorf, aktuell oft im Mindspace
 - **Wer:** 40 bis 80 Gründerinnen, Gründer, Investoren, Mentoren und Startup-Interessierte
-- **Kosten:** keine – Anmeldung über Eventbrite
+- **Tickets:** über Eventbrite – mit deinem Ticket unterstützt du die Community
 
 ## Für Gastgeber
 

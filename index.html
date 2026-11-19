@@ -14,7 +14,7 @@ body_class: home
     <div class="hero-text">
       <p class="kicker">Seit 2013 · Düsseldorf & Rhein-Ruhr</p>
       <h1><span class="accent">StartupDorf</span> ist die Gründer-Community im Raum Düsseldorf.</h1>
-      <p class="lead">Von Gründern, für Gründer: Jeden ersten Mittwoch im Monat treffen sich beim Gründerstammtisch 40 bis 80 Gründerinnen, Gründer und Unterstützer – ehrenamtlich organisiert, offen für alle, kostenlos.</p>
+      <p class="lead">Von Gründern, für Gründer: Jeden ersten Mittwoch im Monat treffen sich beim Gründerstammtisch 40 bis 80 Gründerinnen, Gründer und Unterstützer – ehrenamtlich organisiert, offen für alle und getragen von der Community.</p>
       <p class="actions">
         <a class="btn btn-primary btn-lg" href="{{ '/events/' | relative_url }}">Alle Events ansehen</a>
         <a class="btn btn-ghost" href="{{ '/mitmachen/' | relative_url }}">Mitglied werden</a>
@@ -27,9 +27,9 @@ body_class: home
         <p class="next-label">Nächstes Event</p>
         <p class="next-date"><time datetime="{{ next.start }}">{% include datum.html date=next.start style="lang" %}{% if next.start.size > 10 %} · {% include datum.html date=next.start style="zeit" %}{% endif %}</time></p>
         <h2 id="next-event-title"><a href="{{ next.url | relative_url }}">{{ next.title }}</a></h2>
-        <p class="next-venue">{{ next.venue.name }}{% if next.venue.city %}, {{ next.venue.city }}{% endif %}{% if next.price %} · {{ next.price }}{% endif %}</p>
+        <p class="next-venue">{{ next.venue.name }}{% if next.venue.city %}, {{ next.venue.city }}{% endif %}</p>
         <p class="actions">
-          {%- if next.tickets_url %}<a class="btn btn-primary" href="{{ next.tickets_url }}" rel="noopener">Jetzt anmelden</a>{% endif %}
+          {%- if next.tickets_url %}<a class="btn btn-primary" href="{{ next.tickets_url }}" rel="noopener">Ticket sichern</a>{% endif %}
           <a class="btn btn-link" href="{{ next.url | relative_url }}">Details</a>
         </p>
       </div>

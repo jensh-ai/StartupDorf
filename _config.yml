@@ -24,6 +24,10 @@ social:
     - https://www.youtube.com/channel/UCeLEFvoPHB4uNdZZMvbZbDg
     - https://www.eventbrite.de/o/15406173560
 
+# Standardtext zu Tickets auf Eventseiten (pro Event überschreibbar mit "tickets_hinweis").
+# Bewusst ohne Preise: Die Ticketarten stehen auf Eventbrite.
+tickets_hinweis: "Mit deinem Ticket trägst du die Community und unsere ehrenamtliche Arbeit. Ein kleines Kontingent freier Plätze halten wir auch bereit."
+
 # Vereinsdaten – zentral gepflegt, werden in Footer, Impressum und strukturierten Daten genutzt
 org:
   legal_name: StartupDorf e.V.

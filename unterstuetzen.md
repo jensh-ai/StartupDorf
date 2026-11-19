@@ -2,7 +2,7 @@
 title: Gastgeber & Sponsoren
 permalink: /unterstuetzen/
 kicker: Unterstützen
-lead: StartupDorf ist ehrenamtlich, unabhängig und ohne Eintritt. Das geht nur mit Gastgebern und Partnern, die der Gründerszene Raum geben. Dafür bekommt ihr mehr als ein Logo.
+lead: StartupDorf ist ehrenamtlich und unabhängig. Das geht nur mit Gastgebern und Partnern, die der Gründerszene Raum geben. Dafür bekommt ihr mehr als ein Logo.
 description: "Gastgeber oder Sponsor bei StartupDorf werden: Erreicht jeden Monat 40–80 Gründerinnen, Gründer und Investoren in Düsseldorf. Sichtbarkeit, Talente und Innovation direkt in euren Räumen."
 ---
 

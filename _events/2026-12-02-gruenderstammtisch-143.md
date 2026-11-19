@@ -12,7 +12,6 @@ venue:
   lat: 51.2211143
   lng: 6.7809579
 host: Mindspace Düsseldorf
-price: kostenlos
 tickets_url: https://www.eventbrite.de/e/grunderstammtisch-143-xmas-edition-mulled-wine-good-conversations-tickets-2004948242164
 image: /assets/img/event-143.jpg
 summary: "Glühwein, gute Gespräche und die StartupDorf-Community: Feiert mit uns den Jahresabschluss im Mindspace – from founders, for founders. Since 2013."
@@ -26,4 +25,4 @@ Zum Jahresabschluss gibt es die **Xmas Edition**: Glühwein, gute Gespräche und
 
 **Für wen?** Für alle, die gründen, gegründet haben oder Gründer unterstützen – vom ersten Ideenstadium bis zum Scale-up.
 
-Die Teilnahme ist kostenlos, wir bitten aber um Anmeldung über Eventbrite, damit unser Gastgeber planen kann.
+Tickets gibt es über Eventbrite. Damit hilfst du uns, die Abende und unsere unabhängige Arbeit zu finanzieren – und unser Gastgeber weiß, mit wie vielen Gästen er rechnen kann.
