@@ -253,6 +253,19 @@ p { margin: 0 0 1em; }
 .partner-list strong { display: block; }
 .partner-list span { font-size: .9rem; color: var(--muted); }
 
+// Über uns: Foto & Team
+.photo-link a { display: block; border-radius: var(--radius); overflow: hidden; }
+.photo-link img { margin: 0; border-radius: 0; transition: transform .3s; width: 100%; }
+.photo-link a:hover img { transform: scale(1.02); }
+.team-grid { list-style: none; padding: 0; margin: 1.2rem 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.team-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem 1.2rem; text-align: center; display: flex; flex-direction: column; align-items: center; }
+.prose .team-card img { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; margin: 0 0 .9rem; }
+.prose .team-card h3 { margin: 0 0 .15em; font-size: 1.05rem; }
+.team-role { color: var(--red); font-weight: 700; font-size: .9rem; margin: 0 0 .6rem; }
+.team-bio { font-size: .9rem; color: var(--ink-2); line-height: 1.5; margin: 0 0 .9rem; flex: 1; }
+.team-linkedin { display: inline-flex; align-items: center; gap: .4em; font-weight: 700; font-size: .9rem; text-decoration: none; color: #0a66c2; }
+.team-linkedin:hover { text-decoration: underline; color: #0a66c2; }
+
 // Footer
 .site-footer { background: var(--ink); color: rgba(255,255,255,.78); font-size: .95rem; padding-top: 3.5rem; }
 .site-footer a { color: #fff; text-decoration: none; }
@@ -270,7 +283,7 @@ p { margin: 0 0 1em; }
 @media (max-width: 1000px) {
   .hero-inner, .event-hero-inner, .split { grid-template-columns: 1fr; gap: 2rem; }
   .card-grid { grid-template-columns: repeat(2, 1fr); }
-  .card-grid.three, .blog-grid { grid-template-columns: repeat(2, 1fr); }
+  .card-grid.three, .blog-grid, .team-grid { grid-template-columns: repeat(2, 1fr); }
   .event-list.compact { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
@@ -288,7 +301,7 @@ p { margin: 0 0 1em; }
   .hero .lead { font-size: 1.05rem; }
   .hero-inner { padding-top: 2.5rem; padding-bottom: 2.5rem; }
   .section { padding: 3rem 0; }
-  .card-grid, .card-grid.three, .card-grid.two, .blog-grid, .offer-grid, .partner-list { grid-template-columns: 1fr; }
+  .card-grid, .card-grid.three, .card-grid.two, .blog-grid, .offer-grid, .partner-list, .team-grid { grid-template-columns: 1fr; }
   .event-card-link { padding: 1rem; gap: 1rem; }
   .event-date { flex-basis: 64px; }
   .event-day { font-size: 1.5rem; }

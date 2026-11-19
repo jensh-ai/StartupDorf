@@ -10,7 +10,12 @@ StartupDorf ist ein regionales Netzwerk, das von Gründern aufgebaut wurde, um d
 
 Unser Ziel: die Region an Rhein und Ruhr zu einem der führenden Startup-Hubs Europas zu machen. **Connecting the dots.**
 
-![Die StartupDorf-Community beim Unicorn Pitch Grand Final 2026]({{ '/assets/img/community-team.jpg' | relative_url }})
+<figure class="photo-link">
+  <a href="{{ '/10-years-startupdorf-the-anniversary-celebration-in-a-review/' | relative_url }}">
+    <img src="{{ '/assets/uploads/2023/08/186-10-Jahre-StartupDorf-8.webp' | relative_url }}" alt="Gruppenfoto der Community bei der 10-Jahres-Feier von StartupDorf im August 2023" width="1600" height="1067" decoding="async">
+  </a>
+  <figcaption>10 Jahre StartupDorf, August 2023. <a href="{{ '/10-years-startupdorf-the-anniversary-celebration-in-a-review/' | relative_url }}">Zum Rückblick auf die Jubiläumsfeier →</a></figcaption>
+</figure>
 
 ## Unsere vier Säulen
 
@@ -25,6 +30,14 @@ Unser Ziel: die Region an Rhein und Ruhr zu einem der führenden Startup-Hubs Eu
 ## Ehrenamtlich & unabhängig
 
 Hinter StartupDorf steht kein Konzern und keine Behörde, sondern ein Team ehrenamtlicher, erfahrener Gründerinnen und Gründer. Getragen wird der Verein von seinen Mitgliedern, Gastgebern und Partnern.
+
+## Vorstand
+
+{% include team-grid.html personen=site.data.vorstand.vorstand %}
+
+## Erweiterter Vorstand
+
+{% include team-grid.html personen=site.data.vorstand.erweitert %}
 
 ## Kontakt
 

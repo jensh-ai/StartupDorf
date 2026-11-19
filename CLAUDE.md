@@ -32,7 +32,7 @@ Die beiden Import-Skripte zusammen sind deterministisch. Aber: Ein erneuter Impo
 | `_config.yml` | Seiten- und Vereinsdaten (`org:`), `noindex: true` (Entwurf!), `future: true`, Collections |
 | `_events/JJJJ-MM-TT-name.md` | Events. Felder angelehnt an die Eventbrite-API (siehe README). `start`/`end` **immer als String in Anführungszeichen** |
 | `_posts/*.html` | 156 importierte WordPress-Beiträge (HTML, `render_with_liquid: false`, `lang: de\|en`, `wp_id`, `wp_url`). Neue Beiträge als `.md` |
-| `_data/` | `navigation`, `formate` (Format-Schlüssel für Events), `partner` (Entwurf, aus Blogbeiträgen abgeleitet), `kennzahlen` (Platzhalter), `stimmen` |
+| `_data/` | `navigation`, `formate` (Format-Schlüssel für Events), `partner` (Entwurf, aus Blogbeiträgen abgeleitet), `kennzahlen` (Platzhalter), `stimmen`, `vorstand` (Vorstand + erweiterter Vorstand, Porträts in `assets/img/team/`) |
 | `_includes/` | `head` (SEO, JSON-LD), `header`, `footer`, `event-card`, `post-card`, `events-split` (teilt Events in `upcoming`/`past`), `datum` (deutsche Datumsformate), `jsonld-*` |
 | `_layouts/` | `default`, `page`, `post`, `event` |
 | `_plugins/baseurl_uploads.rb` | Setzt die baseurl vor `/assets/uploads/` in gerendertem HTML (nur nötig, solange die Seite unter /StartupDorf läuft) |

@@ -1,0 +1,59 @@
+# Vorstand und erweiterter Vorstand (Quelle: startupdorf.de/de/about/, Stand Nov. 2026).
+# bio = Originaltext der Person; lang = Sprache der Bio. Fotos: assets/img/team/ (400×400 WebP).
+vorstand:
+  - name: Hanns Tappen
+    rolle: Vorsitzender
+    bild: /assets/img/team/hanns-tappen.webp
+    linkedin: https://www.linkedin.com/in/hannstappen/
+    lang: en
+    bio: "Digital and startup expert | Since 1998 in different roles and functions of technology and internet startups | Head betawerke – discover the startup way! Digital innovations & startups for corporations."
+  - name: Dr. Fabian Braun
+    rolle: Stellv. Vorsitzender
+    bild: /assets/img/team/fabian-braun.webp
+    linkedin: https://www.linkedin.com/in/fsbraun/
+    lang: en
+    bio: "Management consultant, marketing expert, digitisation enthusiast, networker | Founder and CEO @aixcapital, intelligent financial investment bots."
+  - name: Philipp Bohne
+    rolle: Stellv. Vorsitzender
+    bild: /assets/img/team/philipp-bohne.webp
+    linkedin: https://www.linkedin.com/in/philippbohne/
+    lang: en
+    bio: "Digitalization of retail – Passion for E-Commerce and Local-Commerce | Founder of HierBeiDir & Asantis. Create & build ideas to StartUps. Next Pirate King."
+
+erweitert:
+  - name: Florian Baum
+    rolle: Founder yucca
+    bild: /assets/img/team/florian-baum.webp
+    linkedin: https://www.linkedin.com/in/florianbaum/
+    lang: en
+    bio: "Passionated about SaaS & Video Games | Successfully failed 2 Startups | HR-Startup Co-Founder of yucca and graduate of M.A. Innopreneurship – always done for a coffee"
+  - name: Martin Boden
+    rolle: CEO Boden Rechtsanwälte
+    bild: /assets/img/team/martin-boden.webp
+    linkedin: https://www.linkedin.com/in/martin-boden-iplawyer/
+    lang: en
+    bio: "Lawyer in the fields of trademarks, designs and copyright | Founder of Boden Rechtsanwälte | Innovation enthusiast | Mentoring and consulting Startups"
+  - name: Eugenia Gagin
+    rolle: Founder Dentalheld
+    bild: /assets/img/team/eugenia-gagin.webp
+    linkedin: https://www.linkedin.com/in/eugenia-gagin-001831117/
+    lang: en
+    bio: "Startup enthusiast, networker & sports addict with strong background in strategy and finance | Co-Founder of DENTALHELD.de, the market place for dental materials"
+  - name: Mandy Sun
+    rolle: Founder Global Spotlight
+    bild: /assets/img/team/mandy-sun.webp
+    linkedin: https://www.linkedin.com/in/mandy-sun-8a1b3049/
+    lang: en
+    bio: "CEO Global Spotlight GmbH | M.B.A. WHU"
+  - name: Dr. Patrick Müller LL.M.
+    rolle: Partner bei HEUKING
+    bild: /assets/img/team/patrick-mueller.webp
+    linkedin: https://www.linkedin.com/in/dr-patrick-m%C3%BCller-ll-m-72b923130/
+    lang: de
+    bio: "Rechtsanwalt und Partner bei HEUKING / M&A, Venture Capital, Start-ups"
+  - name: Michail Kosak
+    rolle: Co-Founder DueDash
+    bild: /assets/img/team/michail-kosak.webp
+    linkedin: https://www.linkedin.com/in/michailkosak/
+    lang: en
+    bio: "Co-Founder & Managing Director DueDash Capital Networks GmbH"
