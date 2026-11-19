@@ -1,0 +1,128 @@
+# Bericht: Bilder-Import aus WordPress
+
+- Lokal gespeicherte Dateien: **523** in `assets/uploads/`
+- Größe vorher (Originale): 564 MB, nachher: **53 MB**
+- Geänderte Beiträge: 146
+- Schon auf dem alten Server fehlende Bilder (entfernt): **115**
+
+## Fehlende Bilder (404 auf www.startupdorf.de)
+
+- https://www.startupdorf.de/wp-content/uploads/2014/07/StartupDorf-Meetup-6-8-large.png
+- https://www.startupdorf.de/wp-content/uploads/2014/07/startup_people_duesseldorf.png
+- https://www.startupdorf.de/wp-content/uploads/2014/08/METEOR_STARTUPDORF_MEETUP-300x225.png
+- https://www.startupdorf.de/wp-content/uploads/2014/08/METEOR_STARTUPDORF_MEETUP.png
+- https://www.startupdorf.de/wp-content/uploads/2014/08/One-Stop-Source-for-valuable-startup-resources-and-news-in-Duesseldorf-1024x576.jpg
+- https://www.startupdorf.de/wp-content/uploads/2014/08/One-Stop-Source-for-valuable-startup-resources-and-news-in-Duesseldorf.jpg
+- https://www.startupdorf.de/wp-content/uploads/2014/08/StartupDorf-Stammtisch-Meetup-September.png
+- https://www.startupdorf.de/wp-content/uploads/2014/09/1854590602_557a7b950e_b-300x188.jpg
+- https://www.startupdorf.de/wp-content/uploads/2014/09/1854590602_557a7b950e_b.jpg
+- https://www.startupdorf.de/wp-content/uploads/2014/09/KUER_Logo-300x253.png
+- https://www.startupdorf.de/wp-content/uploads/2014/09/KUER_Logo.png
+- https://www.startupdorf.de/wp-content/uploads/2014/09/StartupDorf_Oktober_Stammtisch.png
+- https://www.startupdorf.de/wp-content/uploads/2014/09/droege-ventures-300x22.png
+- https://www.startupdorf.de/wp-content/uploads/2014/09/droege-ventures.png
+- https://www.startupdorf.de/wp-content/uploads/2014/10/Flyer_Work_NL1_1-300x168.png
+- https://www.startupdorf.de/wp-content/uploads/2014/10/StartupDorf_Meetup_Nov.png
+- https://www.startupdorf.de/wp-content/uploads/2014/11/Ein-grosses-NEST.jpg
+- https://www.startupdorf.de/wp-content/uploads/2014/11/STAMMTISCH_HDM_3_12.png
+- https://www.startupdorf.de/wp-content/uploads/2014/11/StartupDorf-Meetup-300x225.png
+- https://www.startupdorf.de/wp-content/uploads/2014/11/StartupDorf-Meetup.png
+- https://www.startupdorf.de/wp-content/uploads/2014/12/STAMMTISCH_JAN15.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Accelerator-Map-1024x509.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Accelerator-Map.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Alumni_SocialImpactLab_Bettervest-300x300.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Alumni_SocialImpactLab_Bettervest.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Chris-Georgiev-1024x683.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Chris-Georgiev.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/01/DUSDIGI_1.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/01/DUSDIGI_4.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/01/DUSDIGI_6.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/01/DUSDIGI_7.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/01/DUSDIGI_8.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/01/DUSDIGI_9.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Daniel-Tomov.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Dronamics-1024x445.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/FLYER-STAMMTISCH-JUNI-16-300x300.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/FLYER-STAMMTISCH-JUNI-16.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Imagga-at-South-Summit-300x163.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Imagga-at-South-Summit.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/STAMMTISCH-AUG-300x300.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/STAMMTISCH-AUG.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/STAMMTISCH-DEC-300x300.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/STAMMTISCH-DEC.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/STAMMTISCH-FEBRUAR.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/STAMMTISCH-JULY-300x300.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/STAMMTISCH-JULY.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/STAMMTISCH-NOV-300x300.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/STAMMTISCH-NOV.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/STAMMTISCH-OCT-300x300.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/STAMMTISCH-OCT.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/STAMMTISCH-SEP-300x300.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/STAMMTISCH-SEP.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Social-Impact-Lab-Duisburg-_-Team-300x200.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Social-Impact-Lab-Duisburg-_-Team.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Social-Impact-Lab-Duisburg_2-200x300.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Social-Impact-Lab-Duisburg_2.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Swipes-1024x700.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Swipes.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Telerik-Academy-1024x506.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Telerik-Academy.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Telerik_Logo-1024x367.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Telerik_Logo.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Walltopia-1024x526.png
+- https://www.startupdorf.de/wp-content/uploads/2015/01/Walltopia.png
+- https://www.startupdorf.de/wp-content/uploads/2015/02/DSC_0324-1024x576.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/03/18Gruenderstammtisch.VollesHaus-1024x583.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/03/18Gruenderstammtisch.VollesHaus.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/03/IMG_1789-e1427373073849-765x1024.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/03/IMG_1789.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/03/IMG_1806-1024x765.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/03/IMG_1806.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/03/IMG_1819-e1427373397397-765x1024.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/03/IMG_1819-e1427373397397.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/03/SAM_1519-Kopie-1024x576.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/03/SAM_1519-Kopie.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/03/SAM_1540-Kopie.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/03/STAMMTISCH_RECAP_18.png
+- https://www.startupdorf.de/wp-content/uploads/2015/03/andre-1024x576.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/03/eon-agile-300x169.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/03/eon-agile.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/03/lund-bühne-1024x765.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/03/lund-bühne.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/05/STAMMTISCH_JUNE-300x300.png
+- https://www.startupdorf.de/wp-content/uploads/2015/06/DUSDIGI_2.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/06/DUSDIGI_5.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/06/Logo_mintano_black_sub_20141013-300x50.png
+- https://www.startupdorf.de/wp-content/uploads/2015/08/175-1024x384.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/08/175.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/10/001.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/10/004.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/10/005.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/10/440_mess_barcelona_16.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/10/EVC-NRW-Logo-medium.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/10/Hanns_Tappen_ISO_Coated_B-W_cut-150x150.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/10/Hanns_Tappen_ISO_Coated_B-W_cut.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/12/038-987x1024.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/12/038.jpg
+- https://www.startupdorf.de/wp-content/uploads/2015/12/Yvonne_Hanns_Peter.jpg
+- https://www.startupdorf.de/wp-content/uploads/2016/01/065.jpg
+- https://www.startupdorf.de/wp-content/uploads/2016/01/1_DUS_Highflyer_Image_Credits_Andreas-Wiese.jpg
+- https://www.startupdorf.de/wp-content/uploads/2016/01/Alumni_SocialImpactLab_KironUniversity-300x300.png
+- https://www.startupdorf.de/wp-content/uploads/2016/01/Alumni_SocialImpactLab_KironUniversity.png
+- https://www.startupdorf.de/wp-content/uploads/2016/01/Highflyer_1A-01-Kopie-Retina-1024x169.png
+- https://www.startupdorf.de/wp-content/uploads/2016/01/StartupDorf-in-Duisburg-208x300.jpg
+- https://www.startupdorf.de/wp-content/uploads/2016/06/FLYER-STAMMTISCH-JUNI-16-REVIEW.png
+- https://www.startupdorf.de/wp-content/uploads/2020/04/Corona-Canvas.pdf
+- https://www.startupdorf.de/wp-content/uploads/2020/08/image-e1610010949300.jpg
+- https://www.startupdorf.de/wp-content/uploads/formidable/53x53-300x300.jpg
+- https://www.startupdorf.de/wp-content/uploads/formidable/DSM-LOGO.png
+- https://www.startupdorf.de/wp-content/uploads/formidable/GO-DUS-300x77.jpg
+- https://www.startupdorf.de/wp-content/uploads/formidable/Mapudo_Logo_red-white-300x84.png
+- https://www.startupdorf.de/wp-content/uploads/formidable/Wifo_blau_rgb_SDWebsite-300x63.jpg
+- https://www.startupdorf.de/wp-content/uploads/formidable/duesseldorf-startup-salzundbrot1-300x171.png
+- https://www.startupdorf.de/wp-content/uploads/formidable/logo_hf_700x4004-300x171.png
+- https://www.startupdorf.de/wp-content/uploads/formidable/qpm-small-300x102.png
+
+## Weiterhin auf www.startupdorf.de verlinkt
+
+- https://www.startupdorf.de/wp-content/uploads/2020/04/Corona-Canvas.pdf

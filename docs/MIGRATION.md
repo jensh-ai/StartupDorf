@@ -20,8 +20,10 @@ Stand: Entwurf vom November 2026. Abhaken, sobald erledigt.
 - [ ] Interne Links in Blogbeiträgen zeigen noch absolut auf `https://www.startupdorf.de/...`. Nach dem Umzug prüfen, ob die Ziele existieren.
 
 ### Bilder der Blogbeiträge
-- [ ] Bilder in `_posts/` werden noch von `www.startupdorf.de/wp-content/uploads/` geladen. **Bevor WordPress abgeschaltet wird**, alle Bilder herunterladen (z. B. nach `assets/uploads/`) und die URLs ersetzen. Sonst sind alle Bilder weg.
-- [ ] Dabei Bilder verkleinern (WebP, max. 1600 px), das hilft bei Ladezeit und Core Web Vitals.
+- [x] Alle Bilder der Beiträge liegen im Repo unter `assets/uploads/` (523 Dateien, WebP, max. 1600 px, ca. 53 MB statt 564 MB). Details und Liste der fehlenden Bilder: [bilder-import.md](bilder-import.md).
+- [ ] **Originale (ca. 560 MB) separat sichern**, z. B. per WordPress-Export oder FTP-Download von `wp-content/uploads/`, und in der Vereinsablage archivieren. Sie gehören bewusst nicht ins Repo.
+- [ ] Bilder, die schon auf der alten Seite fehlten (404, vor allem 2014–2016), sind aus den Beiträgen entfernt. Falls jemand die Originale noch hat: nach `assets/uploads/` legen und wieder einbauen.
+- [ ] Einige alte Beiträge betten Bilder von Fremdservern ein (`hostingkunde.de`, `dushighflyer.de`), die Slideshare-Präsentationen und ein PDF (`Corona-Canvas.pdf`) liegen noch auf dem alten Server. Prüfen, ob sie noch erreichbar sind.
 
 ### Recht
 - [ ] Impressum prüfen: Vorstand aktuell? **Vereinsregister-Nummer fehlt** (für e.V. Pflicht).

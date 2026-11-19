@@ -78,3 +78,9 @@ Einmalig einrichten:
 ## Werkzeuge
 
 - `tools/import_wordpress.py` importiert die Blogbeiträge erneut aus der WordPress-REST-API (`python3 tools/import_wordpress.py`). **Achtung:** Das überschreibt `_posts/`.
+- `tools/localize_images.py` lädt danach alle Bilder und PDFs der Beiträge vom alten Server, verkleinert sie (WebP, max. 1600 px) und legt sie unter `assets/uploads/` ab (benötigt Pillow: `pip install Pillow`).
+- `_plugins/baseurl_uploads.rb` sorgt dafür, dass die Bildpfade der Beiträge auch in der Vorschau unter `…github.io/StartupDorf/` funktionieren.
+
+### Bilder in neuen Beiträgen
+
+Bilder vor dem Hochladen verkleinern (max. 1600 px, WebP oder JPEG unter ca. 300 KB) und unter `assets/uploads/JJJJ/MM/` ablegen. Im Beitrag dann mit `![Beschreibung](/assets/uploads/JJJJ/MM/bild.webp)` einbinden. Die Bildbeschreibung (Alt-Text) hilft bei Barrierefreiheit und Google-Bildersuche.

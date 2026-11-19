@@ -10,7 +10,7 @@ layout: default
     </div>
   </header>
   {%- if page.image %}
-  <figure class="container narrow post-cover"><img src="{{ page.image }}" alt="" decoding="async"></figure>
+  <figure class="container narrow post-cover"><img src="{{ page.image | relative_url }}" alt="" decoding="async"></figure>
   {%- endif %}
   <div class="container narrow prose">
     {{ content }}
