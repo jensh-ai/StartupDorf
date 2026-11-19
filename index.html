@@ -1,0 +1,157 @@
+---
+layout: default
+title: Gründer-Community & Startup-Events in Düsseldorf
+seo_title: "StartupDorf e.V. – Gründer-Community & Startup-Events in Düsseldorf"
+description: "Gründerstammtisch jeden ersten Mittwoch, Unicorn Pitch und ein starkes Netzwerk: StartupDorf e.V. ist die Gründer-Community im Raum Düsseldorf – von Gründern, für Gründer, seit 2013."
+body_class: home
+---
+{% include events-split.html %}
+{%- assign next = upcoming[0] -%}
+
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <p class="kicker">Seit 2013 · Düsseldorf & Rhein-Ruhr</p>
+      <h1><span class="accent">StartupDorf</span> ist die Gründer-Community im Raum Düsseldorf.</h1>
+      <p class="lead">Von Gründern, für Gründer: Jeden ersten Mittwoch im Monat treffen sich beim Gründerstammtisch 40 bis 80 Gründerinnen, Gründer und Unterstützer – ehrenamtlich organisiert, offen für alle, kostenlos.</p>
+      <p class="actions">
+        <a class="btn btn-primary btn-lg" href="{{ '/events/' | relative_url }}">Alle Events ansehen</a>
+        <a class="btn btn-ghost" href="{{ '/mitmachen/' | relative_url }}">Mitglied werden</a>
+      </p>
+    </div>
+    {%- if next %}
+    <aside class="next-event" aria-labelledby="next-event-title">
+      {%- if next.image %}<img src="{{ next.image | relative_url }}" alt="" width="940" height="470" decoding="async">{% endif %}
+      <div class="next-body">
+        <p class="next-label">Nächstes Event</p>
+        <p class="next-date"><time datetime="{{ next.start }}">{% include datum.html date=next.start style="lang" %}{% if next.start.size > 10 %} · {% include datum.html date=next.start style="zeit" %}{% endif %}</time></p>
+        <h2 id="next-event-title"><a href="{{ next.url | relative_url }}">{{ next.title }}</a></h2>
+        <p class="next-venue">{{ next.venue.name }}{% if next.venue.city %}, {{ next.venue.city }}{% endif %}{% if next.price %} · {{ next.price }}{% endif %}</p>
+        <p class="actions">
+          {%- if next.tickets_url %}<a class="btn btn-primary" href="{{ next.tickets_url }}" rel="noopener">Jetzt anmelden</a>{% endif %}
+          <a class="btn btn-link" href="{{ next.url | relative_url }}">Details</a>
+        </p>
+      </div>
+    </aside>
+    {%- else %}
+    <aside class="next-event next-event-empty">
+      <div class="next-body">
+        <p class="next-label">Nächstes Event</p>
+        <h2>Gründerstammtisch – jeden ersten Mittwoch im Monat</h2>
+        <p>Das nächste Datum steht in Kürze fest. Abonniere den Kalender, dann verpasst du nichts.</p>
+        <p class="actions"><a class="btn btn-primary" href="{{ '/events.ics' | relative_url }}">Kalender abonnieren</a></p>
+      </div>
+    </aside>
+    {%- endif %}
+  </div>
+</section>
+
+<section class="stats" aria-label="StartupDorf in Zahlen">
+  <div class="container stats-grid">
+    {%- for k in site.data.kennzahlen %}
+    <div class="stat"><span class="stat-value">{{ k.value }}</span><span class="stat-label">{{ k.label }}</span></div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Kommende Events</h2>
+      <a class="btn btn-link" href="{{ '/events.ics' | relative_url }}">📅 Kalender abonnieren</a>
+    </div>
+    {%- if upcoming.size > 1 %}
+    <div class="event-list">{% for e in upcoming offset: 1 limit: 4 %}{% include event-card.html event=e %}{% endfor %}</div>
+    {%- else %}
+    <div class="callout">
+      <p><strong>Merk dir den ersten Mittwoch im Monat:</strong> Dann ist Gründerstammtisch. Weitere Termine – Unicorn Pitch, Power Pitch, Dorfschule – kündigen wir hier, auf <a href="{{ site.org.linkedin }}" rel="noopener">LinkedIn</a> und <a href="{{ site.org.instagram }}" rel="noopener">Instagram</a> an.</p>
+    </div>
+    {%- endif %}
+    {%- if past.size > 0 %}
+    <h3 class="subhead">Zuletzt bei uns</h3>
+    <div class="event-list compact">{% for e in past limit: 3 %}{% include event-card.html event=e compact=true past=true %}{% endfor %}</div>
+    {%- endif %}
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>Unsere Formate</h2>
+      <a class="btn btn-link" href="{{ '/formate/' | relative_url }}">Alle Formate →</a>
+    </div>
+    <div class="card-grid">
+      {%- for f in site.data.formate %}
+      <a class="format-card" href="{{ f.url | relative_url }}">
+        <h3>{{ f.name }}</h3>
+        <p class="format-rhythm">{{ f.rhythm }}</p>
+        <p>{{ f.short }}</p>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div>
+      <p class="kicker">Für Unternehmen & Räume</p>
+      <h2>Bringt eure Marke mitten in die Gründerszene.</h2>
+      <p>StartupDorf lebt von Gastgebern und Sponsoren. Dafür bekommt ihr Zugang zu einer der aktivsten Gründer-Communities der Region: jeden Monat 40 bis 80 Gründerinnen, Gründer, Investoren und Talente in euren Räumen, Sichtbarkeit auf unseren Kanälen – und echte Gespräche statt Messestand.</p>
+      <ul class="checklist">
+        <li>Euer Haus als Treffpunkt der Startup-Szene</li>
+        <li>Nennung auf Eventseite, Social Media und im Rückblick</li>
+        <li>Direkter Draht zu Gründern, Talenten und Innovation</li>
+      </ul>
+      <p class="actions">
+        <a class="btn btn-primary" href="{{ '/unterstuetzen/#gastgeber' | relative_url }}">Gastgeber werden</a>
+        <a class="btn btn-ghost-dark" href="{{ '/unterstuetzen/#sponsoring' | relative_url }}">Sponsoring-Möglichkeiten</a>
+      </p>
+    </div>
+    <figure class="split-img"><img src="{{ '/assets/img/community-group.jpg' | relative_url }}" alt="Gruppenfoto der Community beim Unicorn Pitch Grand Final 2026" loading="lazy" width="491" height="328"></figure>
+  </div>
+  <div class="container partner-strip">
+    <p>Danke an unsere Gastgeber und Partner:</p>
+    <ul>{% for p in site.data.partner %}<li><a href="{{ p.url }}" rel="noopener">{{ p.name }}</a></li>{% endfor %}</ul>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>Neues aus dem Dorf</h2>
+      <a class="btn btn-link" href="{{ '/blog/' | relative_url }}">Zum Blog →</a>
+    </div>
+    <div class="card-grid three">
+      {%- for p in site.posts limit: 3 %}{% include post-card.html post=p %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Das sagt die Community</h2>
+    <div class="card-grid three">
+      {%- for s in site.data.stimmen %}
+      <figure class="quote" lang="en">
+        <blockquote>„{{ s.quote }}“</blockquote>
+        <figcaption><img src="{{ s.image | relative_url }}" alt="" width="56" height="56" loading="lazy"><span><strong>{{ s.name }}</strong><br>{{ s.role }}</span></figcaption>
+      </figure>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container cta-inner">
+    <div>
+      <h2>Werde Teil des Dorfs.</h2>
+      <p>Für Startups ist die Mitgliedschaft kostenlos. Unternehmen und Einzelpersonen unterstützen die Community mit ihrem Beitrag.</p>
+    </div>
+    <p class="actions">
+      <a class="btn btn-light btn-lg" href="{{ '/mitmachen/' | relative_url }}">Mitglied werden</a>
+      <a class="btn btn-ghost" href="{{ site.org.linkedin }}" rel="noopener">Auf LinkedIn folgen</a>
+    </p>
+  </div>
+</section>

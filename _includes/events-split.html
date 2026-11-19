@@ -1,0 +1,9 @@
+{%- comment -%} Teilt site.events in upcoming (aufsteigend) und past (absteigend). {%- endcomment -%}
+{%- assign heute = site.time | date: "%Y%m%d" | plus: 0 -%}
+{%- assign alle = site.events | sort: "start" -%}
+{%- assign upcoming = "" | split: "" -%}
+{%- assign past = "" | split: "" -%}
+{%- for e in alle -%}
+  {%- assign tag = e.end | default: e.start | date: "%Y%m%d" | plus: 0 -%}
+  {%- if tag >= heute -%}{%- assign upcoming = upcoming | push: e -%}{%- else -%}{%- assign past = past | unshift: e -%}{%- endif -%}
+{%- endfor -%}

@@ -1,0 +1,14 @@
+main:
+  - title: Events
+    url: /events/
+  - title: Formate
+    url: /formate/
+  - title: Blog
+    url: /blog/
+  - title: Unterstützen
+    url: /unterstuetzen/
+  - title: Über uns
+    url: /ueber-uns/
+cta:
+  title: Mitglied werden
+  url: /mitmachen/

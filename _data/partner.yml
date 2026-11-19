@@ -1,0 +1,22 @@
+# Partner, Gastgeber und Sponsoren. ENTWURF: aus Blog-Rückblicken 2025/2026 abgeleitet – bitte vom Vorstand bestätigen
+# und Logos (SVG/PNG) unter assets/img/partner/ ergänzen. "role" erscheint unter dem Namen.
+- name: Mindspace Düsseldorf
+  role: Gastgeber Gründerstammtisch & Unicorn Pitch
+  url: https://www.mindspace.me/
+  host: true
+- name: HEUKING
+  role: Partner & Gastgeber Grand Final
+  url: https://www.heuking.de/
+  host: true
+- name: WHU – Otto Beisheim School of Management
+  role: Partner Power Pitch
+  url: https://www.whu.edu/
+- name: NRW.BANK
+  role: Sponsor Unicorn Pitch
+  url: https://www.nrwbank.de/
+- name: Holvi
+  role: Sponsor Unicorn Pitch
+  url: https://www.holvi.com/
+- name: gradar
+  role: Sponsor Unicorn Pitch
+  url: https://gradar.com/

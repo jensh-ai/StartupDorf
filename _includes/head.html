@@ -1,0 +1,14 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#c0131e">
+<link rel="preload" href="{{ '/assets/fonts/nunito-sans-latin-400-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/open-sans-latin-800-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="icon" type="image/png" href="{{ '/assets/img/logo-icon.png' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/assets/img/logo-icon.png' | relative_url }}">
+<link rel="alternate" type="text/calendar" title="StartupDorf Events" href="{{ '/events.ics' | relative_url }}">
+{% feed_meta %}
+{% if site.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+{% seo %}
+{% include jsonld-organization.html %}
+{% if page.collection == "events" %}{% include jsonld-event.html event=page %}{% endif %}

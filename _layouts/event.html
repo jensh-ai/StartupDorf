@@ -1,0 +1,52 @@
+---
+layout: default
+---
+{%- assign fmt = site.data.formate | where: "key", page.format | first -%}
+{%- assign heute = site.time | date: "%Y%m%d" | plus: 0 -%}
+{%- assign tag = page.end | default: page.start | date: "%Y%m%d" | plus: 0 -%}
+<article class="event-detail">
+  <header class="event-hero">
+    <div class="container event-hero-inner">
+      <div>
+        <p class="kicker"><a href="{{ '/events/' | relative_url }}">Events</a>{% if fmt %} · <a href="{{ fmt.url | relative_url }}">{{ fmt.name }}</a>{% endif %}</p>
+        <h1>{{ page.title }}</h1>
+        {%- if page.subtitle %}<p class="lead">{{ page.subtitle }}</p>{% endif %}
+        <dl class="event-facts">
+          <div><dt>Wann</dt><dd>{% include datum.html date=page.start style="lang" %}{% if page.start.size > 10 %}<br>{% include datum.html date=page.start style="zeit" %}{% if page.end %} – {% include datum.html date=page.end style="zeit" %}{% endif %}{% endif %}</dd></div>
+          <div><dt>Wo</dt><dd>{{ page.venue.name }}{% if page.venue.street %}<br>{{ page.venue.street }}, {{ page.venue.postal_code }} {{ page.venue.city }}{% endif %}</dd></div>
+          {%- if page.price %}<div><dt>Eintritt</dt><dd>{{ page.price }}</dd></div>{% endif %}
+        </dl>
+        {%- if tag >= heute %}
+        <p class="actions">
+          {%- if page.tickets_url %}<a class="btn btn-primary btn-lg" href="{{ page.tickets_url }}" rel="noopener">Kostenlos anmelden</a>{% endif %}
+          <a class="btn btn-ghost" href="{{ '/events.ics' | relative_url }}">Kalender abonnieren</a>
+        </p>
+        {%- else %}
+        <p class="past-note">Dieses Event hat bereits stattgefunden.{% if page.recap_url %} <a href="{{ page.recap_url | relative_url }}">Zum Beitrag im Blog →</a>{% endif %}</p>
+        {%- endif %}
+      </div>
+      {%- if page.image %}<img class="event-hero-img" src="{{ page.image | relative_url }}" alt="" decoding="async">{% endif %}
+    </div>
+  </header>
+  <div class="container narrow prose">
+    <p class="lead">{{ page.summary }}</p>
+    {{ content }}
+    {%- if page.host %}
+    <aside class="host-box">
+      <p><strong>Gastgeber dieses Abends: {{ page.host }}</strong> – danke, dass ihr der Community eure Türen öffnet! <a href="{{ '/unterstuetzen/#gastgeber' | relative_url }}">Selbst Gastgeber werden →</a></p>
+    </aside>
+    {%- endif %}
+    {%- if page.recap_url and tag >= heute %}<p><a href="{{ page.recap_url | relative_url }}">Mehr dazu im Blog →</a></p>{% endif %}
+    {%- if page.venue.lat %}
+    <p><a href="https://www.openstreetmap.org/?mlat={{ page.venue.lat }}&mlon={{ page.venue.lng }}#map=17/{{ page.venue.lat }}/{{ page.venue.lng }}" rel="noopener">Anfahrt auf OpenStreetMap ansehen</a></p>
+    {%- endif %}
+  </div>
+</article>
+<section class="container narrow">
+  {% include events-split.html %}
+  {%- assign weitere = upcoming | where_exp: "e", "e.url != page.url" %}
+  {%- if weitere.size > 0 %}
+  <h2>Weitere Events</h2>
+  <div class="event-list">{% for e in weitere limit: 3 %}{% include event-card.html event=e compact=true %}{% endfor %}</div>
+  {%- endif %}
+</section>

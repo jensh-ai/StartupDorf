@@ -1,0 +1,20 @@
+{%- assign e = include.event -%}
+{%- assign fmt = site.data.formate | where: "key", e.format | first -%}
+<article class="event-card{% if include.past %} is-past{% endif %}">
+  <a class="event-card-link" href="{{ e.url | relative_url }}">
+    <div class="event-date" aria-hidden="true">
+      <span class="event-day">{% include datum.html date=e.start style="tag" %}</span>
+      <span class="event-month">{% include datum.html date=e.start style="monat" %}</span>
+      <span class="event-year">{{ e.start | date: "%Y" }}</span>
+    </div>
+    <div class="event-body">
+      {%- if fmt %}<span class="tag">{{ fmt.name }}</span>{% endif %}
+      <h3>{{ e.title }}</h3>
+      <p class="event-meta">
+        <time datetime="{{ e.start }}">{% include datum.html date=e.start style="wochentag" %}, {% include datum.html date=e.start style="kurz" %}{% if e.start.size > 10 %} · {% include datum.html date=e.start style="zeit" %}{% endif %}</time>
+        · {{ e.venue.name }}
+      </p>
+      {%- unless include.compact %}<p class="event-summary">{{ e.summary }}</p>{% endunless %}
+    </div>
+  </a>
+</article>

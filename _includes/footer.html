@@ -1,0 +1,45 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <img class="footer-logo" src="{{ '/assets/img/logo.png' | relative_url }}" alt="StartupDorf" width="123" height="50" loading="lazy">
+      <p>Die Gründer-Community im Raum Düsseldorf.<br>Von Gründern, für Gründer – seit {{ site.org.founded }}.</p>
+      <ul class="social">
+        <li><a href="{{ site.org.linkedin }}" rel="noopener">LinkedIn</a></li>
+        <li><a href="{{ site.org.instagram }}" rel="noopener">Instagram</a></li>
+        <li><a href="{{ site.org.facebook }}" rel="noopener">Facebook</a></li>
+        <li><a href="{{ site.org.youtube }}" rel="noopener">YouTube</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Community</h2>
+      <ul>
+        <li><a href="{{ '/events/' | relative_url }}">Nächste Events</a></li>
+        <li><a href="{{ '/events.ics' | relative_url }}">Eventkalender abonnieren</a></li>
+        <li><a href="{{ '/formate/' | relative_url }}">Formate</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Mitmachen</h2>
+      <ul>
+        <li><a href="{{ '/mitmachen/' | relative_url }}">Mitglied werden</a></li>
+        <li><a href="{{ '/unterstuetzen/#gastgeber' | relative_url }}">Gastgeber werden</a></li>
+        <li><a href="{{ '/unterstuetzen/#sponsoring' | relative_url }}">Sponsor werden</a></li>
+        <li><a href="{{ '/ueber-uns/' | relative_url }}">Über uns</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Kontakt</h2>
+      <address>
+        {{ site.org.legal_name }}<br>
+        {{ site.org.street }}<br>
+        {{ site.org.postal_code }} {{ site.org.city }}<br>
+        <a href="mailto:{{ site.org.email }}">{{ site.org.email }}</a>
+      </address>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© {{ site.time | date: "%Y" }} {{ site.org.legal_name }} · Made with ♥ in Düsseldorf</span>
+    <span><a href="{{ '/impressum/' | relative_url }}">Impressum</a> · <a href="{{ '/datenschutz/' | relative_url }}">Datenschutz</a></span>
+  </div>
+</footer>

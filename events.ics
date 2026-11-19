@@ -1,0 +1,38 @@
+---
+layout: null
+permalink: /events.ics
+sitemap: false
+---
+{%- capture nl %}
+{% endcapture -%}
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//StartupDorf e.V.//Events//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:StartupDorf Events
+X-WR-TIMEZONE:Europe/Berlin
+X-PUBLISHED-TTL:PT6H
+{%- assign alle = site.events | sort: "start" %}
+{%- for e in alle %}
+BEGIN:VEVENT
+UID:{{ e.url | slugify }}@startupdorf.de
+DTSTAMP:{{ site.time | date: "%Y%m%dT%H%M%SZ" }}
+{%- if e.start.size == 10 %}
+DTSTART;VALUE=DATE:{{ e.start | date: "%Y%m%d" }}
+{%- else %}
+DTSTART;TZID=Europe/Berlin:{{ e.start | date: "%Y%m%dT%H%M%S" }}
+{%- if e.end %}
+DTEND;TZID=Europe/Berlin:{{ e.end | date: "%Y%m%dT%H%M%S" }}
+{%- endif %}
+{%- endif %}
+SUMMARY:{{ e.title | replace: ",", "\," | replace: ";", "\;" }}
+LOCATION:{{ e.venue.name | replace: ",", "\," }}{% if e.venue.street %}\, {{ e.venue.street | replace: ",", "\," }}\, {{ e.venue.postal_code }} {{ e.venue.city }}{% endif %}
+DESCRIPTION:{{ e.summary | strip_newlines | replace: ",", "\," | replace: ";", "\;" | truncate: 300 }}\n\nInfos & Anmeldung: {{ e.url | absolute_url }}
+URL:{{ e.url | absolute_url }}
+{%- if e.status == "cancelled" %}
+STATUS:CANCELLED
+{%- endif %}
+END:VEVENT
+{%- endfor %}
+END:VCALENDAR

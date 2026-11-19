@@ -1,0 +1,84 @@
+title: StartupDorf e.V.
+tagline: Von Gründern, für Gründer – seit 2013
+description: >-
+  StartupDorf e.V. ist die Gründer-Community im Raum Düsseldorf: monatlicher
+  Gründerstammtisch, Unicorn Pitch und Netzwerk für Startups, Gründerinnen und
+  Gründer, Investoren und Unterstützer – ehrenamtlich und unabhängig seit 2013.
+url: "https://www.startupdorf.de"
+baseurl: ""
+lang: de
+locale: de_DE
+timezone: Europe/Berlin
+
+# ENTWURFSPHASE: verhindert, dass Google die Vorschau (github.io) indexiert –
+# sonst Duplicate Content zur alten WordPress-Seite. Beim Livegang auf false setzen!
+noindex: true
+
+logo: /assets/img/logo-icon.png
+social:
+  name: StartupDorf e.V.
+  links:
+    - https://www.linkedin.com/company/startupdorf/
+    - https://www.instagram.com/startupdorf/
+    - https://www.facebook.com/startupdorf
+    - https://www.youtube.com/channel/UCeLEFvoPHB4uNdZZMvbZbDg
+    - https://www.eventbrite.de/o/15406173560
+
+# Vereinsdaten – zentral gepflegt, werden in Footer, Impressum und strukturierten Daten genutzt
+org:
+  legal_name: StartupDorf e.V.
+  founded: "2013"
+  street: Speditionstraße 15a
+  postal_code: "40221"
+  city: Düsseldorf
+  email: contact@startupdorf.de
+  phone: "+49 211 17607293"
+  phone_display: "+49 (211) 176 072 93"
+  eventbrite: https://www.eventbrite.de/o/15406173560
+  linkedin: https://www.linkedin.com/company/startupdorf/
+  instagram: https://www.instagram.com/startupdorf/
+  facebook: https://www.facebook.com/startupdorf
+  youtube: https://www.youtube.com/channel/UCeLEFvoPHB4uNdZZMvbZbDg
+
+permalink: /:title/
+# Nötig, damit kommende Events (Datum in der Zukunft) gebaut werden.
+# Achtung: Blogbeiträge mit Zukunftsdatum werden damit ebenfalls sofort veröffentlicht.
+future: true
+paginate: 12
+paginate_path: /blog/seite/:num/
+
+collections:
+  events:
+    output: true
+    permalink: /events/:year-:month-:day-:title/
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+  - scope: { path: "", type: events }
+    values: { layout: event, seo: { type: WebPage } }
+  - scope: { path: "" }
+    values: { layout: page }
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-redirect-from
+
+feed:
+  path: /feed.xml
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - docs/
+  - tools/
+  - vendor/
+  - .github/
+  - node_modules/

@@ -1,0 +1,33 @@
+# Eventformate des Vereins. "key" wird in _events/*.md als "format" referenziert.
+- key: gruenderstammtisch
+  name: Gründerstammtisch
+  url: /formate/gruenderstammtisch/
+  rhythm: Jeden ersten Mittwoch im Monat
+  short: >-
+    Das Herz der Community seit 2013: Gründerinnen, Gründer und Akteure des
+    Ökosystems treffen sich ganz ungezwungen – über 140 Mal bisher.
+  icon: beer
+- key: unicorn-pitch
+  name: Unicorn Pitch
+  url: /formate/unicorn-pitch/
+  rhythm: Vorrunden übers Jahr, Grand Final im Frühjahr
+  short: >-
+    Sechs Startups, fünf Minuten Pitch, fünf Minuten Fragen. Jury und Publikum
+    küren die Gewinner – die besten ziehen ins Grand Final ein.
+  icon: unicorn
+- key: power-pitch
+  name: Power Pitch
+  url: /formate/#power-pitch
+  rhythm: In Kooperation mit WHU & HEUKING
+  short: >-
+    Zwei Minuten, keine Folien, nur Vision und Stimme. Das schnellste
+    Pitch-Format der Region – das Publikum entscheidet.
+  icon: bolt
+- key: dorfschule
+  name: Dorfschule
+  url: /formate/#dorfschule
+  rhythm: Workshops nach Bedarf
+  short: >-
+    Gründer lernen von Gründern: praxisnahe Workshops und Know-how-Sessions
+    von Mitgliedern und Experten aus der Community.
+  icon: school

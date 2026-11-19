@@ -1,0 +1,21 @@
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="StartupDorf – Startseite">
+      <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="StartupDorf" width="148" height="60">
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+      <label for="nav-toggle" class="nav-burger" aria-label="Menü öffnen"><span></span></label>
+      <ul>
+        {%- for item in site.data.navigation.main %}
+        {%- assign active = false %}
+        {%- if page.url == item.url or page.url contains item.url %}{% assign active = true %}{% endif %}
+        {%- if item.url == "/blog/" and page.collection == "posts" %}{% assign active = true %}{% endif %}
+        <li><a href="{{ item.url | relative_url }}"{% if active %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {%- endfor %}
+        <li class="nav-cta"><a class="btn btn-dark" href="{{ site.data.navigation.cta.url | relative_url }}">{{ site.data.navigation.cta.title }}</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

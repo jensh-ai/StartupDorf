@@ -1,0 +1,24 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "@id": "{{ site.url }}/#organization",
+  "name": {{ site.org.legal_name | jsonify }},
+  "alternateName": "StartupDorf",
+  "url": "{{ site.url }}/",
+  "logo": "{{ site.url }}{{ site.logo }}",
+  "description": {{ site.description | strip | jsonify }},
+  "foundingDate": "{{ site.org.founded }}",
+  "email": "{{ site.org.email }}",
+  "telephone": "{{ site.org.phone }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": {{ site.org.street | jsonify }},
+    "postalCode": "{{ site.org.postal_code }}",
+    "addressLocality": {{ site.org.city | jsonify }},
+    "addressCountry": "DE"
+  },
+  "areaServed": ["Düsseldorf", "Regierungsbezirk Düsseldorf", "Rhein-Ruhr"],
+  "sameAs": {{ site.social.links | jsonify }}
+}
+</script>

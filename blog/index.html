@@ -1,0 +1,24 @@
+---
+title: Blog
+description: "Neuigkeiten, Event-Rückblicke, Interviews und Know-how aus der Düsseldorfer Gründerszene – der Blog von StartupDorf e.V."
+layout: default
+---
+<header class="page-hero">
+  <div class="container">
+    <p class="kicker">Blog</p>
+    <h1>Neues aus dem Dorf</h1>
+    <p class="lead">Event-Rückblicke, Interviews und Know-how aus der Gründerszene in Düsseldorf und an Rhein und Ruhr – seit 2014.</p>
+  </div>
+</header>
+<div class="container">
+  <div class="blog-grid">
+    {%- for p in paginator.posts %}{% include post-card.html post=p %}{% endfor %}
+  </div>
+  {%- if paginator.total_pages > 1 %}
+  <nav class="pagination" aria-label="Seiten">
+    {%- if paginator.previous_page %}<a href="{{ paginator.previous_page_path | relative_url }}">← Neuere</a>{% else %}<span class="disabled">← Neuere</span>{% endif %}
+    <span>Seite {{ paginator.page }} von {{ paginator.total_pages }}</span>
+    {%- if paginator.next_page %}<a href="{{ paginator.next_page_path | relative_url }}">Ältere →</a>{% else %}<span class="disabled">Ältere →</span>{% endif %}
+  </nav>
+  {%- endif %}
+</div>

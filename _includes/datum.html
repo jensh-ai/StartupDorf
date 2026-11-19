@@ -1,0 +1,16 @@
+{%- comment -%} Deutsches Datum. Parameter: date, style = "lang" (Mittwoch, 2. Dezember 2026) | "kurz" (2. Dez. 2026) | "zeit" (18:00 Uhr) {%- endcomment -%}
+{%- assign monate = "Januar,Februar,März,April,Mai,Juni,Juli,August,September,Oktober,November,Dezember" | split: "," -%}
+{%- assign monate_kurz = "Jan.,Feb.,März,Apr.,Mai,Juni,Juli,Aug.,Sept.,Okt.,Nov.,Dez." | split: "," -%}
+{%- assign tage = "Sonntag,Montag,Dienstag,Mittwoch,Donnerstag,Freitag,Samstag" | split: "," -%}
+{%- assign m = include.date | date: "%-m" | minus: 1 -%}
+{%- assign w = include.date | date: "%w" | plus: 0 -%}
+{%- assign d = include.date | date: "%-d" -%}
+{%- assign y = include.date | date: "%Y" -%}
+{%- case include.style -%}
+{%- when "kurz" -%}{{ d }}. {{ monate_kurz[m] }} {{ y }}
+{%- when "zeit" -%}{{ include.date | date: "%H:%M" }} Uhr
+{%- when "tag" -%}{{ d }}
+{%- when "monat" -%}{{ monate_kurz[m] }}
+{%- when "wochentag" -%}{{ tage[w] }}
+{%- else -%}{{ tage[w] }}, {{ d }}. {{ monate[m] }} {{ y }}
+{%- endcase -%}

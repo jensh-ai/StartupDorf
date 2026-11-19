@@ -1,0 +1,33 @@
+---
+title: Startup-Events in Düsseldorf
+description: "Alle kommenden Events von StartupDorf e.V.: Gründerstammtisch jeden ersten Mittwoch im Monat, Unicorn Pitch, Power Pitch und Workshops für Gründerinnen und Gründer in Düsseldorf."
+layout: default
+---
+{% include events-split.html %}
+<header class="page-hero">
+  <div class="container">
+    <p class="kicker">Events</p>
+    <h1>Startup-Events in Düsseldorf</h1>
+    <p class="lead">Jeden ersten Mittwoch im Monat ist Gründerstammtisch – dazu Pitch-Abende und Workshops. Die Teilnahme ist in der Regel kostenlos, die Anmeldung läuft über Eventbrite.</p>
+    <p class="actions">
+      <a class="btn btn-primary" href="{{ '/events.ics' | relative_url }}">📅 Kalender abonnieren</a>
+      <a class="btn btn-ghost-dark" href="{{ site.org.eventbrite }}" rel="noopener">StartupDorf auf Eventbrite folgen</a>
+    </p>
+  </div>
+</header>
+<section class="container" style="padding-bottom:3rem">
+  <h2>Kommende Events</h2>
+  {%- if upcoming.size > 0 %}
+  <div class="event-list">{% for e in upcoming %}{% include event-card.html event=e %}{% endfor %}</div>
+  {%- else %}
+  <div class="callout"><p>Gerade steht kein Termin fest. Der nächste Gründerstammtisch findet wie immer am ersten Mittwoch des Monats statt – abonniere den Kalender oder folge uns auf <a href="{{ site.org.linkedin }}" rel="noopener">LinkedIn</a>.</p></div>
+  {%- endif %}
+</section>
+{%- if past.size > 0 %}
+<section class="section-alt section">
+  <div class="container">
+    <h2>Vergangene Events</h2>
+    <div class="event-list">{% for e in past %}{% include event-card.html event=e past=true %}{% endfor %}</div>
+  </div>
+</section>
+{%- endif %}

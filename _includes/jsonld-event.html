@@ -1,0 +1,50 @@
+{%- assign e = include.event -%}
+{%- assign fmt = site.data.formate | where: "key", e.format | first -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": {{ e.title | jsonify }},
+  "description": {{ e.summary | default: e.excerpt | strip_html | strip | jsonify }},
+  "startDate": "{% if e.start.size == 10 %}{{ e.start }}{% else %}{{ e.start | date_to_xmlschema }}{% endif %}",
+  {%- if e.end %}
+  "endDate": "{% if e.end.size == 10 %}{{ e.end }}{% else %}{{ e.end | date_to_xmlschema }}{% endif %}",
+  {%- endif %}
+  "eventStatus": "https://schema.org/{% if e.status == 'cancelled' %}EventCancelled{% else %}EventScheduled{% endif %}",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": {{ e.venue.name | jsonify }},
+    "address": {
+      "@type": "PostalAddress",
+      {%- if e.venue.street %}
+      "streetAddress": {{ e.venue.street | jsonify }},
+      {%- endif %}
+      {%- if e.venue.postal_code %}
+      "postalCode": "{{ e.venue.postal_code }}",
+      {%- endif %}
+      "addressLocality": {{ e.venue.city | default: "Düsseldorf" | jsonify }},
+      "addressCountry": "DE"
+    }
+    {%- if e.venue.lat %},
+    "geo": { "@type": "GeoCoordinates", "latitude": {{ e.venue.lat }}, "longitude": {{ e.venue.lng }} }
+    {%- endif %}
+  },
+  {%- if e.image %}
+  "image": ["{{ e.image | absolute_url }}"],
+  {%- endif %}
+  {%- if e.tickets_url %}
+  "offers": {
+    "@type": "Offer",
+    "url": {{ e.tickets_url | jsonify }},
+    "price": "0",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock"
+  },
+  {%- endif %}
+  {%- if fmt %}
+  "superEvent": { "@type": "EventSeries", "name": {{ fmt.name | jsonify }}, "url": "{{ fmt.url | absolute_url }}" },
+  {%- endif %}
+  "organizer": { "@id": "{{ site.url }}/#organization", "@type": "Organization", "name": {{ site.org.legal_name | jsonify }}, "url": "{{ site.url }}/" }
+}
+</script>
