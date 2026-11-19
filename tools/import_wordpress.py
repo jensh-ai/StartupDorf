@@ -16,6 +16,7 @@ import json
 import os
 import re
 import sys
+import urllib.parse
 import urllib.request
 
 API = "https://www.startupdorf.de/wp-json/wp/v2"
@@ -77,6 +78,16 @@ def clean_content(c):
     return c.strip() + "\n"
 
 
+def ascii_slug(slug):
+    """WordPress-Slugs mit Umlauten (z. B. gru%cc%88ne) in reine ASCII-Slugs umwandeln."""
+    import unicodedata
+    raw = unicodedata.normalize("NFC", urllib.parse.unquote(slug))
+    for a, b in (("ä", "ae"), ("ö", "oe"), ("ü", "ue"), ("ß", "ss"), ("Ä", "ae"), ("Ö", "oe"), ("Ü", "ue")):
+        raw = raw.replace(a, b)
+    raw = unicodedata.normalize("NFKD", raw).encode("ascii", "ignore").decode()
+    return re.sub(r"-{2,}", "-", re.sub(r"[^a-z0-9-]", "-", raw.lower())).strip("-")
+
+
 def yaml_str(s):
     return json.dumps(s, ensure_ascii=False)
 
@@ -90,7 +101,8 @@ def main():
     tag_names = {t["id"]: html.unescape(t["name"]) for t in tags}
     os.makedirs(OUT, exist_ok=True)
     for p in posts:
-        slug = p["slug"]
+        old_slug = p["slug"]
+        slug = ascii_slug(old_slug)
         title = text_of(p["title"]["rendered"])
         content = clean_content(p["content"]["rendered"])
         plain = text_of(content)
@@ -111,6 +123,10 @@ def main():
             f"title: {yaml_str(title)}",
             f"date: {p['date_gmt'].replace('T', ' ')} +0000",
             f"permalink: /{slug}/",
+        ]
+        if slug != old_slug:  # alte WordPress-URL mit Umlaut weiterleiten
+            lines.append(f"redirect_from: [{yaml_str('/' + old_slug + '/')}]")
+        lines += [
             f"lang: {detect_lang(plain)}",
             f"description: {yaml_str(desc)}",
         ]
