@@ -22,9 +22,10 @@ bundle install                          # Gems landen in vendor/bundle
 bundle exec jekyll serve                # lokal: http://localhost:4000
 bundle exec jekyll build --baseurl /StartupDorf -d /tmp/site-bu   # Vorschau-Build testen
 python3 tools/import_wordpress.py [--from-dir DIR]   # Beiträge neu aus der WP-REST-API (überschreibt _posts/)
-python3 tools/localize_images.py [--cache DIR]       # danach: Bilder lokal holen, WebP, Links umschreiben
+python3 tools/localize_images.py [--cache DIR]       # danach: Bilder lokal holen, WebP, Bild-URLs umschreiben
+python3 tools/rewrite_links.py                       # danach: Links auf startupdorf.de → neue Seite (Zuordnung im Skript)
 ```
-Die beiden Import-Skripte zusammen sind deterministisch. Aber: Ein erneuter Import überschreibt auch alle Änderungen, die von Hand an `_posts/*.html` gemacht wurden.
+Die drei Skripte (in dieser Reihenfolge) sind zusammen deterministisch und idempotent. Aber: Ein erneuter Import überschreibt auch alle Änderungen, die von Hand an `_posts/*.html` gemacht wurden.
 
 ## Struktur
 | Pfad | Inhalt |
@@ -35,13 +36,14 @@ Die beiden Import-Skripte zusammen sind deterministisch. Aber: Ein erneuter Impo
 | `_data/` | `navigation`, `formate` (Format-Schlüssel für Events), `partner` (Entwurf, aus Blogbeiträgen abgeleitet), `kennzahlen` (Platzhalter), `stimmen`, `vorstand` (Vorstand + erweiterter Vorstand, Porträts in `assets/img/team/`) |
 | `_includes/` | `head` (SEO, JSON-LD), `header`, `footer`, `event-card`, `post-card`, `events-split` (teilt Events in `upcoming`/`past`), `datum` (deutsche Datumsformate), `icon` (Social-Icons als Inline-SVG), `team-grid`, `jsonld-*` |
 | `_layouts/` | `default`, `page`, `post`, `event` |
-| `_plugins/baseurl_uploads.rb` | Setzt die baseurl vor `/assets/uploads/` in gerendertem HTML (nur nötig, solange die Seite unter /StartupDorf läuft) |
+| `_plugins/baseurl_uploads.rb` | Setzt die baseurl vor `/assets/uploads/` und (nur in Beiträgen) vor wurzel-relative `href="/…"` (nur nötig, solange die Seite unter /StartupDorf läuft) |
 | `index.html`, `events/`, `events.ics`, `blog/`, `formate/`, `unterstuetzen.md`, `mitmachen.md`, `ueber-uns.md`, `impressum.md`, `datenschutz.md`, `404.html` | Seiten |
 | `assets/css/main.scss` | Gesamtes Design, Farbwerte als CSS-Variablen in `:root` |
 | `assets/fonts/` | Schriften selbst gehostet (kein Google Fonts, wegen DSGVO) |
 | `assets/uploads/JJJJ/MM/` | 523 Blogbilder als WebP (max. 1600 px, ca. 53 MB). Die Originale gehören **nicht** ins Repo |
 | `docs/MIGRATION.md` | **Offene Aufgaben**, zuerst lesen |
 | `docs/bilder-import.md` | Bericht zum Bilder-Import (fehlende Bilder, Rest-Verweise auf den alten Server) |
+| `docs/link-umschreibung.md` | Bericht zu umgeschriebenen Links, Liste der noch auf startupdorf.de zeigenden Links |
 
 ## Getroffene Entscheidungen
 - **Blog-Permalinks = alte WordPress-URLs** (`/<slug>/`), damit Rankings und Backlinks erhalten bleiben. Ausnahme: Slugs mit Umlaut wurden zu ASCII mit `redirect_from` auf die alte URL.

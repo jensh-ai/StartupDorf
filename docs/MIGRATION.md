@@ -17,7 +17,8 @@ Stand: Entwurf vom November 2026. Abhaken, sobald erledigt.
   - `/startup-wall/`, `/listing/...` → Entscheidung offen (siehe unten)
   - Hinweis: GitHub Pages kann nur per HTML/JS weiterleiten, nicht mit echtem HTTP-301. Google wertet das in der Regel wie eine Weiterleitung. Wer echte 301 braucht, schaltet z. B. Cloudflare davor.
 - [x] Blogbeiträge behalten ihre alten Permalinks (`/<slug>/`) und brauchen keine Weiterleitung.
-- [ ] Interne Links in Blogbeiträgen zeigen noch absolut auf `https://www.startupdorf.de/...`. Nach dem Umzug prüfen, ob die Ziele existieren.
+- [x] Interne Links in Blogbeiträgen umgeschrieben (`tools/rewrite_links.py`): Galerie-Links → WebP, Beitragslinks → lokal, alte Seiten → neue Seiten. Die Zuordnungstabelle im Skript ist auch die Vorlage für die Weiterleitungen.
+- [ ] 23 Links zeigen noch auf die alte Seite (v. a. Startup-Wall `/listing/…`), siehe [link-umschreibung.md](link-umschreibung.md).
 
 ### Bilder der Blogbeiträge
 - [x] Alle Bilder der Beiträge liegen im Repo unter `assets/uploads/` (523 Dateien, WebP, max. 1600 px, ca. 53 MB statt 564 MB). Details und Liste der fehlenden Bilder: [bilder-import.md](bilder-import.md).

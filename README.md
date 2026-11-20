@@ -79,6 +79,7 @@ Einmalig einrichten:
 
 - `tools/import_wordpress.py` importiert die Blogbeiträge erneut aus der WordPress-REST-API (`python3 tools/import_wordpress.py`). **Achtung:** Das überschreibt `_posts/`.
 - `tools/localize_images.py` lädt danach alle Bilder und PDFs der Beiträge vom alten Server, verkleinert sie (WebP, max. 1600 px) und legt sie unter `assets/uploads/` ab (benötigt Pillow: `pip install Pillow`).
+- `tools/rewrite_links.py` biegt danach Links in den Beiträgen von www.startupdorf.de auf die neue Seite um (Galerie-Links → WebP, Beitragslinks → lokal, alte Seiten → neue Seiten laut Zuordnung). Bericht: `docs/link-umschreibung.md`.
 - `_plugins/baseurl_uploads.rb` sorgt dafür, dass die Bildpfade der Beiträge auch in der Vorschau unter `…github.io/StartupDorf/` funktionieren.
 
 ### Bilder in neuen Beiträgen
